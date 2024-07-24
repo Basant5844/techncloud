@@ -6,7 +6,7 @@ const NavBar = () => {
     <div class="navbar bg-white container mx-auto">
     <div class="flex-none">
       <a href="#">
-        <Image src="/logo1.png"  width="180" height="35"></Image>
+      <Link href="/."><Image src="/logo1.png"  width="180" height="35"></Image></Link>
       </a>
     </div>
     <div class="flex-1">
@@ -24,9 +24,7 @@ const NavBar = () => {
             <li>
               <Link href="/Brand">Brand</Link>
             </li>
-            <li><a>Industry</a></li>
-            <li><a>Ask Questoion</a></li>
-            <li><a>Blog</a></li>
+            <li><Link href="/About">Industry</Link></li>
             <li><a>Ask Questoion</a></li>
             <li><button class="btn btn-sm bg-blue-700 text-white rounded-full border-transparent">Get Free Advice</button></li>
             
