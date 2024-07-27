@@ -6,6 +6,7 @@ import SliderBody from "./components/SliderBody";
 import CardList from "./components/CardList";
 import Footer from "./components/Footer";
 import HeroTiles from "./components/HeroTiles";
+import FooterSocial from "./components/FooterSocial";
 
 export default function Home() {
   
@@ -24,7 +25,8 @@ export default function Home() {
       {/* <HeroTiles/> */}
       <br></br>
       <br></br>
-      <Footer/>
+      <Footer/>     
+      <FooterSocial/>
     </div>
      
    </main>

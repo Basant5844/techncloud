@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
+import "./Banner.css";
 
 const Footer = () => {
   return (
     <div class = "w-full bg-base-200">
-    <div class="navbar bg-base-200 container mx-auto p-10">
-    <footer class="footer bg-base-200 text-base-content p-10">
+    <div class="navbar bg-col container mx-auto p-10">
+    {/* <footer class="footer bg-col text-base-content p-10"> */}
+    <footer class="footer bg-col text-col p-10">
  
   <nav>
     <h6 class="footer-title">Services</h6>
@@ -30,7 +32,7 @@ const Footer = () => {
     <h6 class="footer-title">Newsletter</h6>
     <fieldset class="form-control w-80">
       <label class="label">
-        <span class="label-text">Enter your email address</span>
+        {/* <span class="label-text">Enter your email address</span> */}
       </label>
       <div class="join">
         <input
@@ -42,8 +44,10 @@ const Footer = () => {
     </fieldset>
   </form>
 </footer>
+
 </div>
 </div>
+
   )
 }
 

@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 import Link from 'next/link';
 
 const NavBar = () => {
@@ -9,6 +9,7 @@ const NavBar = () => {
       <Link href="/."><Image src="/logo1.png"  width="180" height="35"></Image></Link>
       </a>
     </div>
+    
     <div class="flex-1">
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1 text-black">

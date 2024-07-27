@@ -1,5 +1,6 @@
 
-import Image from "next/image"
+import Image from "next/image";
+import "./Banner.css";
 
 const Banner = () => {
   return (
@@ -7,8 +8,7 @@ const Banner = () => {
   <div class="hero-content text-center">
     <div class="max-w-3xl text-white">
       <div class="max-w-3xl text-white">
-        <h1 class="text-5xl font-bold">Discover, Compare and Buy right
-        software for your business</h1>
+        <h1 class="text-5xl font-bold">B<span className="highlighted-number">2</span>B Bussiness</h1>
         </div>
       <p class="py-6">
           
