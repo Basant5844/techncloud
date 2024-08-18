@@ -6,5 +6,22 @@
     background: #0a112f;
   }
   .text-col{
-    color:#ffff;
+    color:#000000;
   }
+  .divtext{
+    color:#0000;
+  }
+  .banrImg {
+    background-image: linear-gradient(-45deg, rgba(0, 0, 255, 0.8) 0%, /* Blue color with some transparency */
+    rgb(197 0 197 / 93%) 100%), /* Purple color with some transparency */
+     
+    url('/1.png');
+}
+ .bgman{
+  background-image:url('/man.png');
+}
+.bgReg{
+  background-image:  /* Purple color with some transparency */
+     
+    url('/bgReg.png');
+}

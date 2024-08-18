@@ -9,8 +9,8 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
+    class={className}
+      style={{ ...style, display: "block", background: "grey",borderRadius: '15px' }}
       onClick={onClick}
     />
   );
@@ -20,8 +20,8 @@ function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={className}
-      style={{ ...style, display: "block", background: "green" }}
+    class={className}
+      style={{ ...style, display: "block", background: "grey" ,borderRadius: '15px'}}
       onClick={onClick}
     />
   );
@@ -40,16 +40,13 @@ const CardList = () => {
     prevArrow: <SamplePrevArrow />
       };
   return (
-    <div class="h-50 bg-white pt-10">
+    <div class="h-50 bg-none pt-10">
     <div class="h-[350px] w-10/12 m-auto pt-3 ">
       <Slider {...settings}>
       <div class="w-screen">
-                <div class="card bg-base-100 w-64 h-100 shadow-xl">
+                <div class="card bg-[url('/Best_Seller.png')] w-64 h-100 shadow-xl">
                   <figure>
                   <Image src="/aws.png" width="175" height="100" />
-                    {/* <img
-                      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                      alt="Shoes" class="w-45 h-50" /> */}
                   </figure>
                   <div class="card-body w-85">
                     <h2 class="card-title">Shoes!</h2>
@@ -59,9 +56,9 @@ const CardList = () => {
                 </div>
               </div>
               <div class="w-screen">
-                <div class="card bg-base-100 w-64 h-100 shadow-xl">
+                <div class="card bg-[url('/Editor.png')] w-64 h-100 shadow-xl">
                   <figure>
-                  <Image src="/cisco.jpg" width="225" height="150" />
+                  <Image src="/cisco.png" width="175" height="100" />
                   </figure>
                   <div class="card-body w-85">
                     <h2 class="card-title">Shoes!</h2>
@@ -70,9 +67,9 @@ const CardList = () => {
                   </div>
                 </div>
               </div><div class="w-screen">
-                <div class="card bg-base-100 w-64 h-100 shadow-xl">
+                <div class="card bg-[url('/Sponsored.png')] w-64 h-100 shadow-xl">
                   <figure>
-                  <Image src="/quick.jpeg" width="175" height="100" />
+                  <Image src="/quick.png" width="175" height="100" />
                   </figure>
                   <div class="card-body w-85">
                     <h2 class="card-title">Shoes!</h2>
@@ -81,7 +78,7 @@ const CardList = () => {
                   </div>
                 </div>
               </div><div class="w-screen">
-                <div class="card bg-base-100 w-64 h-100 shadow-xl">
+                <div class="card bg-[url('/Trending.png')] w-64 h-100 shadow-xl">
                   <figure>
                   <Image src="/oracle.png" width="175" height="100" />
                   </figure>

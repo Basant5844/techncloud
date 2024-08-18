@@ -3,7 +3,7 @@ import Image from "next/image"
 const SliderBody = () => {
   return (
     <div class="container mx-auto">
-      <div class="carousel bg-white ">
+      <div class="carousel bg-none ">
         <div id="slide1" class="carousel-item relative w-full">
         <Image src="/banner.png" width="1500" height="30" />
           <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">

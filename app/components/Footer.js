@@ -3,10 +3,10 @@ import "./Banner.css";
 
 const Footer = () => {
   return (
-    <div class = "w-full bg-base-200">
-    <div class="navbar bg-col container mx-auto p-10">
+    <div class = "w-full banrImg">
+    <div class="navbar  container mx-auto p-10">
     {/* <footer class="footer bg-col text-base-content p-10"> */}
-    <footer class="footer bg-col text-col p-10">
+    <footer class="footer  text-white p-8">
  
   <nav>
     <h6 class="footer-title">Services</h6>

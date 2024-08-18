@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const NavBar = () => {
   return (
-    <div class="navbar bg-white container mx-auto">
+    <div class="navbar bg-none container mx-auto">
     <div class="flex-none">
       <a href="#">
       <Link href="/."><Image src="/logo1.png"  width="180" height="35"></Image></Link>
@@ -16,7 +16,7 @@ const NavBar = () => {
             <li>
                 <details>
                 <summary> Categories </summary>
-                <ul class="p-2 w-60 bg-white">
+                <ul class="p-2 w-60 bg-none">
                     <li><a>Submenu 1</a></li>
                     <li><a>Submenu 2</a></li>
                 </ul>
@@ -38,7 +38,18 @@ const NavBar = () => {
         {/* <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" /> */}
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1 text-black">
-            <li><a>Become a Seller</a></li>
+            <li>
+            <button class="btn" onclick="my_modal_3.showModal()">Become a Seller</button>
+            <dialog id="my_modal_3" class="modal">
+  <div class="modal-box">
+    <form method="dialog">
+      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click on ✕ button to close</p>
+  </div>
+</dialog>
+            </li>
             </ul>
         </div>
       </div>
@@ -52,7 +63,7 @@ const NavBar = () => {
         </div>
         <ul
           tabindex="0"
-          class="menu menu-sm dropdown-content bg-white rounded-box z-[1] mt-3 w-52 p-2 shadow text-black">
+          class="menu menu-sm dropdown-content bg-none rounded-box z-[1] mt-3 w-52 p-2 shadow text-black">
           <li>
             <a class="justify-between">
               Profile
@@ -64,6 +75,7 @@ const NavBar = () => {
         </ul>
       </div>
     </div>
+    
   </div>
   )
 }
