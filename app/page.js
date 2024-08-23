@@ -28,7 +28,7 @@ export default function Home() {
       {/* <HeroTiles/> */}
       <br></br>
       <br></br>
-      <HeroBannerRight/>
+      {/* <HeroBannerRight/> */}
       <br></br>
       <SliderBody/>
       <br></br>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Link from 'next/link';
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -45,6 +46,7 @@ const CardList = () => {
       <Slider {...settings}>
       <div class="w-screen">
                 <div class="card bg-[url('/Best_Seller.png')] w-64 h-100 shadow-xl">
+                <Link href={{pathname: "/product", query:{id:"1",Name:"AWS"} }}>
                   <figure>
                   <Image src="/aws.png" width="175" height="100" />
                   </figure>
@@ -53,10 +55,12 @@ const CardList = () => {
                     <p>If a dog chews shoes whose shoes does he choose?</p>
                     
                   </div>
+                  </Link>
                 </div>
               </div>
               <div class="w-screen">
                 <div class="card bg-[url('/Editor.png')] w-64 h-100 shadow-xl">
+                <Link href={{pathname: "/product", query:{id:"2",Name:"CISCO"} }}>
                   <figure>
                   <Image src="/cisco.png" width="175" height="100" />
                   </figure>
@@ -65,9 +69,11 @@ const CardList = () => {
                     <p>If a dog chews shoes whose shoes does he choose?</p>
                     
                   </div>
+                  </Link>
                 </div>
               </div><div class="w-screen">
                 <div class="card bg-[url('/Sponsored.png')] w-64 h-100 shadow-xl">
+                <Link href={{pathname: "/product", query:{id:"3",Name:"QUICK HEAL"} }}>
                   <figure>
                   <Image src="/quick.png" width="175" height="100" />
                   </figure>
@@ -76,9 +82,11 @@ const CardList = () => {
                     <p>If a dog chews shoes whose shoes does he choose?</p>
                     
                   </div>
+                  </Link>
                 </div>
               </div><div class="w-screen">
                 <div class="card bg-[url('/Trending.png')] w-64 h-100 shadow-xl">
+                <Link href={{pathname: "/product", query:{id:"4",Name:"ORACLE"} }}>
                   <figure>
                   <Image src="/oracle.png" width="175" height="100" />
                   </figure>
@@ -86,7 +94,9 @@ const CardList = () => {
                     <h2 class="card-title">Shoes!</h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
                   </div>
+                  </Link>
                 </div>
+                
               </div>
         </Slider>
       </div>

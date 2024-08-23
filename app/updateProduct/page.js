@@ -4,10 +4,9 @@ import "../components/Banner.css";
 import Link from 'next/link';
 import Image from "next/image";
 import Swal from 'sweetalert2';
-//import { addComment } from '../ApiCall/addComment';
-import axios from 'axios';
+import { addComment } from '../ApiCall/addComment';
 
-const Sform = () => {
+const page = () => {
 	const onSubmit = (data) => {
 		console.log(data);
 	};
@@ -19,45 +18,46 @@ const Sform = () => {
 			confirmButtonText: 'Cool'
 		  })
 	  };
-	  const addComment = async (formData) => {
-		debugger;
-		try {
-		  const response = await axios.post('https://localhost:7075/api/UserRegistration', formData, {
-			headers: {
-			  'Content-Type': 'application/json',
-			},
-		  });
-	
-		  console.log(response, "response");
-	
-		  const result = response.data;
-		  console.log("Response data received:", result);
-		} catch (error) {
-		  if (error.response) {
-			console.error('HTTP error:', error.response.status, error.response.statusText, error.response.data);
-		  } else if (error.request) {
-			console.error('No response received:', error.request);
-		  } else {
-			console.error('Error in setup:', error.message);
-		  }
-		}
-	  };
 	  const vrfOtp = async (e) => {
 		debugger;
 
 		var formdata = {
 			"regId": 0,
-				"name": "basant",
+				"name": "string",
 				"emailAddress": "basantanand99@gmail.com",
-				"phoneNumber": 6204388040,
-				"mobileNumber": 8478589584,
-				"password": "123"
+				"phoneNumber": 0,
+				"mobileNumber": 0,
+				"password": "string"
 		}
 		await addComment(formdata);
+
+		// fetch('https://localhost:7075/api/UserRegistration', {
+		// 	method: 'POST',
+		// 	headers: { 'Content-Type': 'application/json' },
+		// 	body: JSON.stringify({
+		// 		"regId": 0,
+		// 		"name": "string",
+		// 		"emailAddress": "basantanand99@gmail.com",
+		// 		"phoneNumber": 0,
+		// 		"mobileNumber": 0,
+		// 		"password": "string"
+		// 	})
+		// })
+		// .then(response => {
+		// 	if (!response.ok) {
+		// 		throw new Error('Network response was not ok');
+		// 	}
+		// 	return response.json();
+		// })
+		// .then(data => {
+		// 	console.log('Success:', data);
+		// 	document.getElementById('OTPhidden').style.display = 'block';
+		// })
+		// .catch(error => {
+		// 	console.error('Error:', error);
+		// });
+		
 	  };
-
-	  
-
 
 	
 	
@@ -148,7 +148,7 @@ const Sform = () => {
 							</div>
 						</div>
 						<div class="w-full lg:w-1/2 py-16 px-12">
-							<h2 class="text-3xl mb-4">Register</h2>
+							<h2 class="text-3xl mb-4">Update Product</h2>
 							<p class="mb-4">
 								Create your account. It’s free and only takes a minute
 							</p>
@@ -194,4 +194,4 @@ const Sform = () => {
 	);
 };
 
-export default Sform;
+export default page;

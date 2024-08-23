@@ -35,9 +35,9 @@ const Banner = () => {
     const handleClick = () => {
       window.location.href = '/Sform';
     };
-    const handleProduct = () =>{
-      window.location.href = '/product';
-    }
+    // const handleProduct = () =>{
+    //   window.location.href = '/product';
+    // }
 
 
   return (
@@ -55,7 +55,7 @@ const Banner = () => {
             <li>
                 <details>
                 <summary> Categories </summary>
-                <ul class="p-2 w-60 bg-none">
+                <ul class="p-2 w-60 bg-white text-black">
                     <li><a>Submenu 1</a></li>
                     <li><a>Submenu 2</a></li>
                 </ul>
@@ -65,7 +65,15 @@ const Banner = () => {
               <Link href="/Brand">Brand</Link>
             </li>
             <li><Link href="/About">Industry</Link></li>
-            <li><a>Ask Questoion</a></li>
+            <li>
+                <details>
+                    <summary> Product </summary>
+                      <ul class="p-2 w-60 bg-white text-black">
+                        <li><Link href="/newProduct">Add Prod.</Link></li>
+                        <li><Link href="/updateProduct">Update Prod.</Link></li>
+                      </ul>
+                </details>
+            </li>
             <li><button class="btn btn-sm bg-blue-700 text-white rounded-full border-transparent text-xl mt-1 font-sans">Get Free Advice</button></li>
             
             </ul>
@@ -79,17 +87,8 @@ const Banner = () => {
             <ul class="menu menu-horizontal px-1 text-black">
             <li>
             <button class="btn text-xl mt-1" onClick={handleClick}>Become a Seller</button>
-            <button class="btn text-xl mt-1" onClick={handleProduct}>Become a Seller</button>
+            {/* <button class="btn text-xl mt-1" onClick={handleProduct}>Become a Seller</button> */}
             {/* <button class="btn text-xl mt-1" onclick="my_modal_3.showModal() font-sans">Become a Seller</button> */}
-            <dialog id="my_modal_3" class="modal">
-  <div class="modal-box">
-    <form method="dialog">
-      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-    </form>
-    <h3 class="text-lg font-bold">Hello!</h3>
-    <p class="py-4">Press ESC key or click on ✕ button to close</p>
-  </div>
-</dialog>
             </li>
             </ul>
         </div>

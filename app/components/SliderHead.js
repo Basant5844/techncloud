@@ -92,7 +92,7 @@ const SliderHead = () => {
 
         <div class="h-50 bg-none pt-10">
           
-            <div class="h-[180px] w-10/12 m-auto pt-3 ">
+            <div class="h-[250px] w-10/12 m-auto pt-3 ">
               <div class="text-black">
                 <p>
                   Top Selling 
@@ -101,11 +101,10 @@ const SliderHead = () => {
                 </p>
               </div>
               <p class="py-1">
-          
               </p>
       <Slider {...settings}>
               <div class="w-screen">
-                <div class="card bg-base-100 w-56 h-100 shadow-xl">
+                <div class="card bg-slate-100 w-56 h-120 shadow-xl">
                   <figure>
                   <div class="card bg-none w-full h-110 shadow-xl">
                   <div class="h-12 w-64">
@@ -116,7 +115,7 @@ const SliderHead = () => {
                 </div>
               </div>
               <div class="w-screen">
-                <div class="card bg-base-100 w-56 h-100 shadow-xl">
+                 <div class="card bg-slate-100 w-56 h-120 shadow-xl">
                   <figure>
                   <div class="card bg-none w-full h-100 shadow-xl">
                   <div class="h-12 w-64">
@@ -127,7 +126,7 @@ const SliderHead = () => {
                 </div>
               </div>
               <div class="w-screen">
-                <div class="card bg-base-100 w-56 h-100 shadow-xl">
+                 <div class="card bg-slate-100 w-56 h-120 shadow-xl">
                   <figure>
                   <div class="card bg-none w-full h-100 shadow-xl">
                   <div class="h-12 w-64">
@@ -138,7 +137,7 @@ const SliderHead = () => {
                 </div>
               </div>
               <div class="w-screen">
-                <div class="card bg-base-100 w-56 h-100 shadow-xl">
+                 <div class="card bg-slate-100 w-56 h-120 shadow-xl">
                   <figure>
                   <div class="card bg-none w-full h-100 shadow-xl">
                   <div class="h-12 w-64">
@@ -149,7 +148,7 @@ const SliderHead = () => {
                 </div>
               </div>
               <div class="w-screen">
-                <div class="card bg-base-100 w-56 h-100 shadow-xl">
+                 <div class="card bg-slate-100 w-56 h-120 shadow-xl">
                   <figure>
                   <div class="card bg-none w-full h-100 shadow-xl">
                   <div class="h-12 w-64">
@@ -160,7 +159,7 @@ const SliderHead = () => {
                 </div>
               </div>
               <div class="w-screen">
-                <div class="card bg-base-100 w-56 h-100 shadow-xl">
+                 <div class="card bg-slate-100 w-56 h-120 shadow-xl">
                   <figure>
                   <div class="card bg-none w-full h-100 shadow-xl">
                   <div class="h-12 w-64">
@@ -171,6 +170,8 @@ const SliderHead = () => {
                 </div>
               </div>
         </Slider>
+        <p class="py-1">
+        </p>
       </div>
   </div>
        

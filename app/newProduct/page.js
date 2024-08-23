@@ -4,10 +4,9 @@ import "../components/Banner.css";
 import Link from 'next/link';
 import Image from "next/image";
 import Swal from 'sweetalert2';
-//import { addComment } from '../ApiCall/addComment';
-import axios from 'axios';
+import { addComment } from '../ApiCall/addComment';
 
-const Sform = () => {
+const page = () => {
 	const onSubmit = (data) => {
 		console.log(data);
 	};
@@ -19,45 +18,9 @@ const Sform = () => {
 			confirmButtonText: 'Cool'
 		  })
 	  };
-	  const addComment = async (formData) => {
-		debugger;
-		try {
-		  const response = await axios.post('https://localhost:7075/api/UserRegistration', formData, {
-			headers: {
-			  'Content-Type': 'application/json',
-			},
-		  });
-	
-		  console.log(response, "response");
-	
-		  const result = response.data;
-		  console.log("Response data received:", result);
-		} catch (error) {
-		  if (error.response) {
-			console.error('HTTP error:', error.response.status, error.response.statusText, error.response.data);
-		  } else if (error.request) {
-			console.error('No response received:', error.request);
-		  } else {
-			console.error('Error in setup:', error.message);
-		  }
-		}
-	  };
 	  const vrfOtp = async (e) => {
 		debugger;
-
-		var formdata = {
-			"regId": 0,
-				"name": "basant",
-				"emailAddress": "basantanand99@gmail.com",
-				"phoneNumber": 6204388040,
-				"mobileNumber": 8478589584,
-				"password": "123"
-		}
-		await addComment(formdata);
 	  };
-
-	  
-
 
 	
 	
@@ -140,42 +103,56 @@ const Sform = () => {
 			<div class="h-screen pt-20">
 				<div class="container mx-auto ">
 					<div class="flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-white rounded-xl mx-auto shadow-lg overflow-hidden">
-						<div class="w-full lg:w-1/2 flex flex-col items-center justify-center p-12 bg-no-repeat bg-cover bg-center bg-[url('../public/Register-Background.png')]">
-						<h1 class="text-white text-3xl mb-3">TECHNCLOUD</h1>
-							<h1 class="text-white text-3xl mb-3">Welcome</h1>
-							<div>
-								<p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suspendisse aliquam varius rutrum purus maecenas ac <a href="#" class="text-purple-500 font-semibold">Learn more</a></p>
-							</div>
-						</div>
 						<div class="w-full lg:w-1/2 py-16 px-12">
-							<h2 class="text-3xl mb-4">Register</h2>
+						<h2 class="text-3xl mb-4">Add Product</h2>
 							<p class="mb-4">
-								Create your account. It’s free and only takes a minute
+								Create your Products. It’s free and only takes a minute
 							</p>
 
-							<div class="grid grid-cols-2 gap-5">
-								<input type="text" placeholder="Firstname" class="border border-gray-400 py-1 px-2" />
-								<input type="text" placeholder="Lastname" class="border border-gray-400 py-1 px-2" />
+							<div class="mt-5">
+								<input type="text" placeholder="Product Name" class="border border-gray-400 py-1 px-2" />
 							</div>
-							<div class="grid grid-cols-4 gap-5 mt-5">
-							<div class="col-span-3"><input type="text" placeholder="Verified Business Email" class="border border-gray-400 py-1 px-2 w-full" />
+							<div class="mt-5">
+								<input type="text" placeholder="Product Rate" class="border border-gray-400 py-1 px-2" />
 
 							</div>
-								
-								<button class="bg-purple-500 text-center text-white" onClick={vrfOtp}>Verify</button>
+							<div class="mt-5">
+								<input type="text" placeholder="Categeory" class="border border-gray-400 py-1 px-2 w-full" />
 							</div>
-							<div class="mt-5" id="OTPhidden" style={{ display: 'none' }}>
-								<input type="text" placeholder="OTP" class="border border-gray-400 py-1 px-2 w-full" />
+							<div class="mt-5">
+								<input type="text" placeholder="Image" class="border border-gray-400 py-1 px-2 w-full" />
 							</div>
+							<div class="mt-5">
+								<input type="password" placeholder="Image-1" class="border border-gray-400 py-1 px-2 w-full" />
+							</div>
+							<div class="mt-5">
+								<input type="password" placeholder="Image-2" class="border border-gray-400 py-1 px-2 w-full" />
+							</div>
+							<div class="mt-5">
+								<input type="password" placeholder="Image-3" class="border border-gray-400 py-1 px-2 w-full" />
+							</div>
+							
+						</div>
+						<div class="w-full lg:w-1/2 py-16 px-12">
+							<h2 class="text-3xl mb-4">Details</h2>
+							<p class="mb-4">
+								About the products
+							</p>
+
+							<div class="mt-5">
+								<input type="password" placeholder="Image-4" class="border border-gray-400 py-1 px-2 w-full" />
+							</div>
+							<div class="mt-5">
+								<input type="password" placeholder="Sub Categeory" class="border border-gray-400 py-1 px-2 w-full" />
+							</div>
+							
 							<div class="mt-5">
 								<input type="text" placeholder="+91234567890" class="border border-gray-400 py-1 px-2 w-full" />
 							</div>
 							<div class="mt-5">
-								<input type="password" placeholder="Password" class="border border-gray-400 py-1 px-2 w-full" />
+								<input type="password" placeholder="+91234567890" class="border border-gray-400 py-1 px-2 w-full" />
 							</div>
-							<div class="mt-5">
-								<input type="password" placeholder="Confirm Password" class="border border-gray-400 py-1 px-2 w-full" />
-							</div>
+							
 							<div class="mt-5">
 								<input type="checkbox" class="border border-gray-400" />
 								<span>
@@ -194,4 +171,4 @@ const Sform = () => {
 	);
 };
 
-export default Sform;
+export default page;

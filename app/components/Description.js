@@ -1,31 +1,58 @@
 "use client";
 
 
-const Description = () => {
-
+const Description = ({id,Name}) => {
+console.log(id);
+var message = "";
+var rate = "";
+if(id==1){
+  message="Whether you want to migrate, innovate, or scale, explore those possibilities on Amazon Web Services—the world’s most comprehensive and broadly adopted cloud. Our experts and programs support both business and technical teams on a wide range of projects to help you differentiate your software company and invent on behalf of your customers.";
+  rate="₹ 5,999 excl. GST";
+}else if(id==2){
+  message="Discover recommended content just for you and your team. Explore skills assessments, learn-on-the-go tutorials, and more. Start for free. ";
+  rate="₹ 8,499 excl. GST";
+}else if(id==3){
+  message="Real Time Virus Protection — Grab the instant offer for your connected digital world. Secure your digital peace now. Protect your devices and online identity with advanced antivirus software. Anti-Tracker. Email Protection. USB Protection. Browsing Protection. Safe Banking. Smart Scan.";
+  rate="₹ 6,499 excl. GST";
+}
+else if(id==4){
+  message="Oracle makes software, called database management systems (DBMS), to create and manage databases. An RDBMS is a relational database management system. An Oracle Database (aka Oracle RDBMS) is a collection of data organized by type with relationships being maintained between the different types.";
+  rate="₹ 10,499 excl. GST";
+}
   return (
     <div class="w-1/2 max-lg:w-4/5">
-      <h2 class="text-orange font-bold text-sm">SNEAKER COMPANY</h2>
-      <h1 class="text-5xl mt-4 mb-8 max-sm:text-3xl">
-        Fall Limited Edition Sneakers
+      <h2 class="text-orange font-bold text-sm">Business Software</h2>
+      <h1 class="text-4xl mt-4 mb-8 max-sm:text-3xl font-semibold">
+      {Name}
       </h1>
-      <p>
-        These low-profile sneakers are you perfect casual wear companion.
-        Featuring a durable rubber outer sole. {`They'll`} withstand everything
-        the weather can offer.
+      <hr></hr>
+      <p class="mt-6">
+        {message}
       </p>
       <div class="flex flex-col items-start gap-4 mt-4 mb-5 max-sm:flex-row max-sm:justify-between max-sm:mb-7 max-sm:items-center">
         <div class="flex items-center gap-4">
-          <span class="font-bold text-4xl">$125.00</span>
-          <span class="text-orange bg-pale-orange py-1 px-2 rounded-sm">
-            50%
-          </span>
+          <span class="font-bold text-2xl">{rate}</span>
         </div>
-        <p class="line-through font-bold">$250.00</p>
+        {/* <div class="flex items-center gap-4">
+          <span class="font-bold text-sm">₹ 7,079 incl. GST</span>
+        </div> */}
       </div>
-
+      Save Extra with 2 Offers
+      <p class="mt-2">
+      <ul class="steps">
+        <li data-content="★" class="step step-neutral"></li>
+      </ul>
+      Save upto 28%, Get GST Invoice on your business purchase<br/>
+      <ul class="steps">
+        <li data-content="★" class="step step-neutral"></li>
+      </ul>Buy Now & Pay Later, Check offer on payment page.
+      </p>
+      <p class="mt-3">
+      Easily access final accounts, inventory reports, ledgers, tax reports & more with BUSY Accounting Software, your ultimate game-changing financial accounting solution
+      </p>
+      <p class="mt-6">
       <div class="flex items-center gap-5 max-lg:flex-col max-lg:items-start max-sm:clear-right">
-        <div class="flex items-center justify-between p-3 bg-light-grayish-blue rounded-lg w-36 max-sm:w-full">
+        {/* <div class="flex items-center justify-between p-3 bg-light-grayish-blue rounded-lg w-36 max-sm:w-full">
           <img
             src="images/icon-minus.svg"
             alt=""
@@ -41,7 +68,7 @@ const Description = () => {
             width={18}
             // onClick={add}
           />
-        </div>
+        </div> */}
         <button
         //   onClick={addToChart}
           class="hover:opacity-70 flex items-center justify-center gap-4 bg-blue-800 w-60 py-3 rounded-lg max-sm:w-full"
@@ -67,6 +94,7 @@ const Description = () => {
           <span class="text-blue-800 font-bold">Buy Now</span>
         </button>
       </div>
+      </p>
     </div>
   );
 };

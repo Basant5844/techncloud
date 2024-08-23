@@ -1,22 +1,28 @@
+"use client";
 import Image from "next/image";
 import Link from 'next/link';
 
 const NavBar = () => {
+
+  const handleClick = () => {
+    window.location.href = '/Sform';
+  };
+
   return (
-    <div class="navbar bg-none container mx-auto">
+    <div class="inset-x-0 top-0 navbar bg-none container mx-auto font-sans">
     <div class="flex-none">
       <a href="#">
       <Link href="/."><Image src="/logo1.png"  width="180" height="35"></Image></Link>
       </a>
     </div>
     
-    <div class="flex-1">
-        <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1 text-black">
+    <div class="flex-1 ">
+        <div class="navbar-center hidden lg:flex ">
+            <ul class="menu menu-horizontal px-1 text-black text-xl">
             <li>
                 <details>
                 <summary> Categories </summary>
-                <ul class="p-2 w-60 bg-none">
+                <ul class="p-2 w-60 bg-white text-black">
                     <li><a>Submenu 1</a></li>
                     <li><a>Submenu 2</a></li>
                 </ul>
@@ -26,8 +32,16 @@ const NavBar = () => {
               <Link href="/Brand">Brand</Link>
             </li>
             <li><Link href="/About">Industry</Link></li>
-            <li><a>Ask Questoion</a></li>
-            <li><button class="btn btn-sm bg-blue-700 text-white rounded-full border-transparent">Get Free Advice</button></li>
+            <li>
+                <details>
+                    <summary> Product </summary>
+                      <ul class="p-2 w-60 bg-white text-black">
+                        <li><Link href="/newProduct">Add Prod.</Link></li>
+                        <li><Link href="/updateProduct">Update Prod.</Link></li>
+                      </ul>
+                </details>
+            </li>
+            <li><button class="btn btn-sm bg-blue-700 text-white rounded-full border-transparent text-xl mt-1 font-sans">Get Free Advice</button></li>
             
             </ul>
         </div>
@@ -39,26 +53,21 @@ const NavBar = () => {
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1 text-black">
             <li>
-            <button class="btn" onclick="my_modal_3.showModal()">Become a Seller</button>
-            <dialog id="my_modal_3" class="modal">
-  <div class="modal-box">
-    <form method="dialog">
-      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-    </form>
-    <h3 class="text-lg font-bold">Hello!</h3>
-    <p class="py-4">Press ESC key or click on ✕ button to close</p>
-  </div>
-</dialog>
+            <button class="btn text-xl mt-1" onClick={handleClick}>Become a Seller</button>
+            {/* <button class="btn text-xl mt-1" onClick={handleProduct}>Become a Seller</button> */}
+            {/* <button class="btn text-xl mt-1" onclick="my_modal_3.showModal() font-sans">Become a Seller</button> */}
             </li>
             </ul>
         </div>
       </div>
-      <div class="dropdown dropdown-end">
+      <div class="dropdown dropdown-end scale-125">
         <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
           <div class="w-10 rounded-full">
             <img
               alt="Tailwind CSS Navbar component"
-              src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+              src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" 
+             
+              />
           </div>
         </div>
         <ul
@@ -75,7 +84,6 @@ const NavBar = () => {
         </ul>
       </div>
     </div>
-    
   </div>
   )
 }
