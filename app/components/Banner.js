@@ -3,6 +3,7 @@ import Image from "next/image";
 import "./Banner.css";
 import React, { useState } from "react";
 import Link from 'next/link';
+import { useRouter } from 'next/navigation'
 
 const Banner = () => {
   
@@ -31,9 +32,10 @@ const Banner = () => {
         setIsPopupVisibleTablecls1(true);
       }
     };
-
+    
+    const router = useRouter();
     const handleClick = () => {
-      window.location.href = '/Sform';
+      router.push('/eseller');
     };
     // const handleProduct = () =>{
     //   window.location.href = '/product';
@@ -41,11 +43,11 @@ const Banner = () => {
 
 
   return (
-<div class="hero h-screen banrImg">
+<div class="hero h-half banrImg">
 <div class="absolute inset-x-0 top-0 navbar bg-none container mx-auto font-sans">
     <div class="flex-none">
       <a href="#">
-      <Link href="/."><Image src="/logo1.png"  width="180" height="35"></Image></Link>
+      <Link href="/."><Image alt="" src="/logo1.png"  width={180} height={35} /></Link>
       </a>
     </div>
     
@@ -61,10 +63,10 @@ const Banner = () => {
                 </ul>
                 </details>
             </li>
-            <li>
+            <li class="zoom">
               <Link href="/Brand">Brand</Link>
             </li>
-            <li><Link href="/About">Industry</Link></li>
+            <li class="zoom"><Link href="/About">Industry</Link></li>
             <li>
                 <details>
                     <summary> Product </summary>
@@ -74,7 +76,7 @@ const Banner = () => {
                       </ul>
                 </details>
             </li>
-            <li><button class="btn btn-sm bg-blue-700 text-white rounded-full border-transparent text-xl mt-1 font-sans">Get Free Advice</button></li>
+            <li class="zoom"><button class="btn btn-sm bg-blue-700 text-white rounded-full border-transparent text-xl mt-1 font-sans">Get Free Advice</button></li>
             
             </ul>
         </div>
@@ -85,7 +87,7 @@ const Banner = () => {
         {/* <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" /> */}
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1 text-black">
-            <li>
+            <li class="zoom">
             <button class="btn text-xl mt-1" onClick={handleClick}>Become a Seller</button>
             {/* <button class="btn text-xl mt-1" onClick={handleProduct}>Become a Seller</button> */}
             {/* <button class="btn text-xl mt-1" onclick="my_modal_3.showModal() font-sans">Become a Seller</button> */}
@@ -99,7 +101,7 @@ const Banner = () => {
             <img
               alt="Tailwind CSS Navbar component"
               src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" 
-             
+              width={180} height={35}
               />
           </div>
         </div>
@@ -120,11 +122,11 @@ const Banner = () => {
     
   </div>
 
-<div class="hero h-screen ">
+<div class="hero">
   <div class="hero-content text-center opacity-100">
     <div class="max-w-9xl text-white ">
       <div class="max-w-9xl text-white">
-        <h1 class="text-8xl font-bold font-sans">B<span class="text-9xl font-sans">2</span>B Bussiness</h1>
+        <h1 class="text-6xl font-bold font-sans ">B2B <span class="text-6xl font-sans roll-out">Technology</span> Market Place</h1>
         </div>
       <p class="py-6">
           

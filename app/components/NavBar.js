@@ -28,10 +28,10 @@ const NavBar = () => {
                 </ul>
                 </details>
             </li>
-            <li>
+            <li class="zoom">
               <Link href="/Brand">Brand</Link>
             </li>
-            <li><Link href="/About">Industry</Link></li>
+            <li class="zoom"><Link href="/About">Industry</Link></li>
             <li>
                 <details>
                     <summary> Product </summary>
@@ -41,7 +41,7 @@ const NavBar = () => {
                       </ul>
                 </details>
             </li>
-            <li><button class="btn btn-sm bg-blue-700 text-white rounded-full border-transparent text-xl mt-1 font-sans">Get Free Advice</button></li>
+            <li class="zoom"><button class="btn btn-sm bg-blue-700 text-white rounded-full border-transparent text-xl mt-1 font-sans">Get Free Advice</button></li>
             
             </ul>
         </div>
@@ -52,7 +52,7 @@ const NavBar = () => {
         {/* <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" /> */}
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1 text-black">
-            <li>
+            <li class="zoom">
             <button class="btn text-xl mt-1" onClick={handleClick}>Become a Seller</button>
             {/* <button class="btn text-xl mt-1" onClick={handleProduct}>Become a Seller</button> */}
             {/* <button class="btn text-xl mt-1" onclick="my_modal_3.showModal() font-sans">Become a Seller</button> */}

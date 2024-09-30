@@ -18,3 +18,36 @@ html {
 .fullImageContainer img{
     width: 100%;
 }
+.zoom:hover{
+    transform: scale(1.06);
+    transition: 0.5s ease-in-out;
+}
+
+
+/*  Utility CSS */
+
+.ls-lg {
+    letter-spacing: .1rem;
+}
+
+.bs-header {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.bs-1 {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.country-list {
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-wrap: nowrap;
+}
+
+.country-list li * {
+    pointer-events: none;
+}
+
+.checkbox:checked, .checkbox[aria-checked="true"] {
+    background-image: url("data:image/svg+xml,%3csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 12'%3e %3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M1 5.917 5.724 10.5 15 1.5'/%3e %3c/svg%3e") !important;
+}

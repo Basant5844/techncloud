@@ -147,7 +147,7 @@ else if(id==4){
   return (
     <div className="h-[550px] grid grid-cols-1 w-2/5">
       {selectedImage && (
-        <div class="h-[480px] bg-white">
+        <div class="h-[480px] bg-white w-[600px]">
           <div class="fullImageContainer">
             <img
             src={selectedImage}
@@ -159,7 +159,7 @@ else if(id==4){
         </div>
         
       )}
-      <div className="grid grid-cols-4 gap-3 w-10/12 max-sm:hidden pt-6">
+      <div className="grid grid-cols-4 gap-3 w-11/12 max-sm:hidden pt-6">
         {images.map((image, imageIndex) => {
           console.log(image.thumbnail)
           return (

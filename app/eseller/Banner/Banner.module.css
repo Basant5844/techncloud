@@ -1,0 +1,7 @@
+.banner {
+    background-image: url(/eseller/banner.jpg);
+}
+
+.bgDark {
+    background-color: rgba(0,0,0,.5);
+}

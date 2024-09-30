@@ -45,7 +45,7 @@ const CardList = () => {
     <div class="h-[350px] w-10/12 m-auto pt-3 ">
       <Slider {...settings}>
       <div class="w-screen">
-                <div class="card bg-[url('/Best_Seller.png')] w-64 h-100 shadow-xl">
+                <div class="card mx-auto bg-[url('/Best_Seller.png')] w-64 h-100 shadow-xl zoom">
                 <Link href={{pathname: "/product", query:{id:"1",Name:"AWS"} }}>
                   <figure>
                   <Image src="/aws.png" width="175" height="100" />
@@ -59,7 +59,7 @@ const CardList = () => {
                 </div>
               </div>
               <div class="w-screen">
-                <div class="card bg-[url('/Editor.png')] w-64 h-100 shadow-xl">
+                <div class="card  mx-auto bg-[url('/Editor.png')] w-64 h-100 shadow-xl zoom">
                 <Link href={{pathname: "/product", query:{id:"2",Name:"CISCO"} }}>
                   <figure>
                   <Image src="/cisco.png" width="175" height="100" />
@@ -72,7 +72,7 @@ const CardList = () => {
                   </Link>
                 </div>
               </div><div class="w-screen">
-                <div class="card bg-[url('/Sponsored.png')] w-64 h-100 shadow-xl">
+                <div class="card mx-auto bg-[url('/Sponsored.png')] w-64 h-100 shadow-xl zoom">
                 <Link href={{pathname: "/product", query:{id:"3",Name:"QUICK HEAL"} }}>
                   <figure>
                   <Image src="/quick.png" width="175" height="100" />
@@ -85,7 +85,7 @@ const CardList = () => {
                   </Link>
                 </div>
               </div><div class="w-screen">
-                <div class="card bg-[url('/Trending.png')] w-64 h-100 shadow-xl">
+                <div class="card mx-auto bg-[url('/Trending.png')] w-64 h-100 shadow-xl zoom">
                 <Link href={{pathname: "/product", query:{id:"4",Name:"ORACLE"} }}>
                   <figure>
                   <Image src="/oracle.png" width="175" height="100" />
