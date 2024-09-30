@@ -4157,7 +4157,8 @@ const RegistrationForm = () => {
           </label>
           <label className="label cursor-pointer">
             <span className="label-text">Remember me</span>
-            <input type="checkbox" defaultChecked className="checkbox" />
+            <input type="radio" name="radio-1" className="radio" defaultChecked />
+<input type="radio" name="radio-1" className="radio" />
           </label>
         </div>
       </form>
