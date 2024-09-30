@@ -4157,9 +4157,31 @@ const RegistrationForm = () => {
           </label>
           <label className="label cursor-pointer">
             <span className="label-text">Remember me</span>
-            <input type="radio" name="radio-1" className="radio" defaultChecked />
-<input type="radio" name="radio-1" className="radio" />
+            <div className="flex gap-4">
+              <label className="label cursor-pointer gap-3">
+                <span className="label-text">Yes</span>
+                <input
+                  type="radio"
+                  name="radio-10"
+                  className="radio checked:bg-red-500"
+                  defaultChecked
+                />
+              </label>
+              <label className="label cursor-pointer gap-3">
+    <span className="label-text">No</span>
+    <input type="radio" name="radio-10" className="radio checked:bg-blue-500" defaultChecked />
+  </label>
+            </div>
           </label>
+          <label className="input input-bordered flex items-center gap-2">
+            Passward*
+            <input
+              type="password"
+              className="grow border-none input"
+              placeholder="Enter Here"
+            />
+          </label>
+          <button className="btn">Submit</button>
         </div>
       </form>
     </section>
