@@ -1,5 +1,8 @@
 "use client";
 
+import { useRef, useState } from "react";
+import { useRouter } from 'next/navigation'
+
 const RegistrationForm = () => {
   const handelDropdownClick = () => {
     const elem = document.activeElement;
@@ -8,14 +11,156 @@ const RegistrationForm = () => {
       document.querySelector("body").focus();
     }
   };
+
+  const formStatus = useRef({
+    firstName: false,
+    lastName: false,
+    email: false,
+    phone: false,
+    product: false,
+    password: false,
+  });
+  const [firstName, setFirstName] = useState("");
+  const firstNameChange = (event) => {
+    const { value } = event.target;
+    if (value) {
+      const nameRegex = /^[a-zA-Z\s]{2,50}$/;
+      const container = event.target.closest("label");
+      if (!nameRegex.test(value)) {
+        if (container) container.classList.add("input-error");
+        formStatus.current = { ...formStatus.current, firstName: false };
+      } else {
+        if (container) container.classList.remove("input-error");
+        formStatus.current = { ...formStatus.current, firstName: true };
+      }
+      setFirstName(value);
+    }
+  };
+  const [lastName, setLastName] = useState("");
+  const lastNameChange = (event) => {
+    const { value } = event.target;
+    if (value) {
+      const nameRegex = /^[a-zA-Z\s]{2,50}$/;
+      const container = event.target.closest("label");
+      if (!nameRegex.test(value)) {
+        if (container) container.classList.add("input-error");
+        formStatus.current = { ...formStatus.current, lastName: false };
+      } else {
+        if (container) container.classList.remove("input-error");
+        formStatus.current = { ...formStatus.current, lastName: true };
+      }
+      setLastName(value);
+    }
+  };
+  const [email, setEmail] = useState("");
+  const emailChange = (event) => {
+    const { value } = event.target;
+    const publicDomains = [
+      "@gmail.com",
+      "@yahoo.com",
+      "@outlook.com",
+      "@hotmail.com",
+      "@msn.com",
+      "@live.com",
+      "@icloud.com",
+      "@aol.com",
+    ];
+    if (value) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const container = event.target.closest("label");
+      if (!emailRegex.test(value)) {
+        if (container) container.classList.add("input-error");
+        formStatus.current = { ...formStatus.current, email: false };
+      } else {
+        const isPublicDomain = publicDomains.some((domain) =>
+          value.endsWith(domain)
+        );
+        if (isPublicDomain) {
+          if (container) container.classList.add("input-error");
+          formStatus.current = { ...formStatus.current, email: false };
+        } else {
+          if (container) container.classList.remove("input-error");
+          formStatus.current = { ...formStatus.current, email: true };
+        }
+      }
+      setEmail(value);
+    }
+  };
+
+  const [phone, setPhone] = useState("");
+  const phoneChange = (event) => {
+    const { value } = event.target;
+    const container = event.target.closest("label");
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(value)) {
+      if (container) container.classList.add("input-error");
+      formStatus.current = { ...formStatus.current, phone: false };
+    } else {
+      if (container) container.classList.remove("input-error");
+      formStatus.current = { ...formStatus.current, phone: true };
+    }
+    setPhone(value);
+  };
+
+  const [password, setPassword] = useState("");
+  const passwordChange = (event) => {
+    const { value } = event.target;
+    const container = event.target.closest("label");
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!passwordRegex.test(value)) {
+      if (container) container.classList.add("input-error");
+      formStatus.current = { ...formStatus.current, password: false };
+    } else {
+      if (container) container.classList.remove("input-error");
+      formStatus.current = { ...formStatus.current, password: true };
+    }
+    setPassword(value);
+  };
+
+  const router = useRouter();
+  const submitForm = async (e) => {
+    e.preventDefault();
+    const status = formStatus.current;
+    if(status.firstName && status.lastName && status.email && status.phone && status.password) {
+      const formData = {
+        firstName,
+        lastName,
+        email,
+        phone,
+        password
+      };
+      try {
+        // Make the POST request to the API route or an external API
+        const response = await fetch('/api/partner-registration', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData), // Convert form data to JSON
+        });
+  
+        
+        if(response.ok) {
+          const result = await response.json();
+          if(result.sucess.acknowledged) router.push('/partner');
+        }
+      } catch (error) {
+        console.log('Failed to submit form');
+      }
+    }
+  }
+
   return (
     <section className="">
       <form>
         <div className="flex flex-col gap-6">
-          <label className="input input-bordered flex items-center gap-2">
+          <label className="input input-bordered flex items-center gap-2 ">
             First Name*
             <input
               type="text"
+              value={firstName}
+              onChange={firstNameChange}
               className="grow border-none input"
               placeholder="Enter Here"
             />
@@ -24,6 +169,8 @@ const RegistrationForm = () => {
             Last Name*
             <input
               type="text"
+              value={lastName}
+              onChange={lastNameChange}
               className="grow border-none input"
               placeholder="Enter Here"
             />
@@ -32,6 +179,8 @@ const RegistrationForm = () => {
             Business Email*
             <input
               type="text"
+              onChange={emailChange}
+              value={email}
               className="grow border-none input"
               placeholder="Enter Here"
             />
@@ -4151,12 +4300,14 @@ const RegistrationForm = () => {
             </details>
             <input
               type="text"
+              onChange={phoneChange}
+              value={phone}
               className="grow border-none input"
               placeholder="Phone Number"
             />
           </label>
           <label className="label cursor-pointer">
-            <span className="label-text">Remember me</span>
+            <span className="label-text">Do you have Software Product?</span>
             <div className="flex gap-4">
               <label className="label cursor-pointer gap-3">
                 <span className="label-text">Yes</span>
@@ -4168,20 +4319,29 @@ const RegistrationForm = () => {
                 />
               </label>
               <label className="label cursor-pointer gap-3">
-    <span className="label-text">No</span>
-    <input type="radio" name="radio-10" className="radio checked:bg-blue-500" defaultChecked />
-  </label>
+                <span className="label-text">No</span>
+                <input
+                  type="radio"
+                  name="radio-10"
+                  className="radio checked:bg-blue-500"
+                  defaultChecked
+                />
+              </label>
             </div>
           </label>
           <label className="input input-bordered flex items-center gap-2">
             Passward*
             <input
+              value={password}
+              onChange={passwordChange}
               type="password"
               className="grow border-none input"
               placeholder="Enter Here"
             />
           </label>
-          <button className="btn">Submit</button>
+          <button className="btn bg-indigo-600 text-white hover:bg-neutral-800 uppercase" onClick={submitForm}>
+            Submit
+          </button>
         </div>
       </form>
     </section>
