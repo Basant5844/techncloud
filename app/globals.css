@@ -55,3 +55,7 @@ html {
 .error-message {
     top: -1.5rem;
 }
+
+.z-max {
+    z-index: 99999 !important;
+}

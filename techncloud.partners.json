@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "66fbd4c78838c3f731b08e22"
+  },
+  "firstName": "Anmol",
+  "lastName": "Singh",
+  "email": "anmol@singh.com",
+  "phone": "5164646464",
+  "software": true,
+  "password": "$2a$10$hYHJjLqZtjPG2YzNPcasI.7uqZP6sf7uUKSarHJpAUZ6UmxeREBma",
+  "product": {},
+  "createdAt": {
+    "$date": "2024-10-01T10:53:59.277Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66fbd6cc8838c3f731b08e23"
+  },
+  "firstName": "Anmol",
+  "lastName": "singh",
+  "email": "anmol@test.com",
+  "phone": "4646464646",
+  "software": true,
+  "password": "$2a$10$sHOITnBXgf96d.dW4MWHYuBFzzK0Qzs8UZQtHMrlyn/blDm5SopPe",
+  "product": {},
+  "createdAt": {
+    "$date": "2024-10-01T11:02:36.469Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66fbe1428838c3f731b08e24"
+  },
+  "firstName": "Anmol",
+  "lastName": "Singh",
+  "email": "test@test.com",
+  "phone": "6547164646",
+  "software": true,
+  "password": "$2a$10$W4ROF1CVPFPZaMg2jCHQcOCU09rU4kbySKGG12hWXaX0Fa9sIV3Zm",
+  "product": {},
+  "createdAt": {
+    "$date": "2024-10-01T11:47:14.223Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66fbe3858838c3f731b08e27"
+  },
+  "firstName": "Login",
+  "lastName": "Testing",
+  "email": "login@test.com",
+  "phone": "3464646464",
+  "software": true,
+  "password": "$2a$10$y0n9Q4uQxQvHpfQC6qe4GeQ4osdHzf747gzJ2Kk5xOxJjkIWOka3S",
+  "product": {},
+  "createdAt": {
+    "$date": "2024-10-01T11:56:53.901Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66fbe5408838c3f731b08e28"
+  },
+  "firstName": "Anmol",
+  "lastName": "Singh",
+  "email": "anmol@gmailtech.com",
+  "phone": "6464646444",
+  "software": true,
+  "password": "$2a$10$D/kNUqzkIpmd7deaYHBXnOf3dqLiTZBi7ZUPo97u/OxrwwQKl2wba",
+  "product": {},
+  "createdAt": {
+    "$date": "2024-10-01T12:04:16.818Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "671f30148106c10957417894"
+  },
+  "firstName": "DB",
+  "lastName": "Testing",
+  "email": "dbTesting@db.com",
+  "phone": "9964646464",
+  "software": true,
+  "password": "$2a$10$Gor84N3tR1eb4GXfabUxpuafN3jCxVnmx2XjVvM0Ob/yU44s3/0gW",
+  "product": {},
+  "createdAt": {
+    "$date": "2024-10-28T06:32:52.788Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "671f542e8106c10957417895"
+  },
+  "firstName": "test",
+  "lastName": "testing",
+  "email": "test@xyz.com",
+  "phone": "6461646416",
+  "software": true,
+  "password": "$2a$10$ZLEmiJTZNxODmMdvXMa8Q.3ldbhhpyW2eaL83rMqVITyjC5tg/piK",
+  "product": {},
+  "createdAt": {
+    "$date": "2024-10-28T09:06:54.125Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "671f547f8106c10957417896"
+  },
+  "firstName": "Anmol",
+  "lastName": "singh",
+  "email": "anmol@xyz.com",
+  "phone": "4646464646",
+  "software": true,
+  "password": "$2a$10$x1mmTTRIFv.rHwKsmQnk8ePh1r/YuCEvYo1MBjH9Cp8S3qsvLgnZi",
+  "product": {},
+  "createdAt": {
+    "$date": "2024-10-28T09:08:15.098Z"
+  }
+}]
